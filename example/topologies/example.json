@@ -1,0 +1,229 @@
+{
+  "network": {
+    "links": [
+      {
+        "bidirectional": true,
+        "from_interface": "R1",
+        "from_router": "R0",
+        "to_interface": "R0",
+        "to_router": "R1",
+        "weight": 9
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R2",
+        "from_router": "R0",
+        "to_interface": "R0",
+        "to_router": "R2",
+        "weight": 1
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R8",
+        "from_router": "R0",
+        "to_interface": "R0",
+        "to_router": "R8",
+        "weight": 7
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R11",
+        "from_router": "R0",
+        "to_interface": "R0",
+        "to_router": "R11",
+        "weight": 4
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R10",
+        "from_router": "R0",
+        "to_interface": "R0",
+        "to_router": "R10",
+        "weight": 6
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R3",
+        "from_router": "R1",
+        "to_interface": "R1",
+        "to_router": "R3",
+        "weight": 6
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R8",
+        "from_router": "R1",
+        "to_interface": "R1",
+        "to_router": "R8",
+        "weight": 6
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R9",
+        "from_router": "R2",
+        "to_interface": "R2",
+        "to_router": "R9",
+        "weight": 5
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R3",
+        "from_router": "R2",
+        "to_interface": "R2",
+        "to_router": "R3",
+        "weight": 4
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R6",
+        "from_router": "R2",
+        "to_interface": "R2",
+        "to_router": "R6",
+        "weight": 6
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R4",
+        "from_router": "R3",
+        "to_interface": "R3",
+        "to_router": "R4",
+        "weight": 6
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R5",
+        "from_router": "R3",
+        "to_interface": "R3",
+        "to_router": "R5",
+        "weight": 8
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R6",
+        "from_router": "R3",
+        "to_interface": "R3",
+        "to_router": "R6",
+        "weight": 1
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R10",
+        "from_router": "R3",
+        "to_interface": "R3",
+        "to_router": "R10",
+        "weight": 5
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R8",
+        "from_router": "R4",
+        "to_interface": "R4",
+        "to_router": "R8",
+        "weight": 3
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R7",
+        "from_router": "R5",
+        "to_interface": "R5",
+        "to_router": "R7",
+        "weight": 1
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R9",
+        "from_router": "R5",
+        "to_interface": "R5",
+        "to_router": "R9",
+        "weight": 4
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R6",
+        "from_router": "R5",
+        "to_interface": "R5",
+        "to_router": "R6",
+        "weight": 1
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R9",
+        "from_router": "R6",
+        "to_interface": "R6",
+        "to_router": "R9",
+        "weight": 1
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R9",
+        "from_router": "R7",
+        "to_interface": "R7",
+        "to_router": "R9",
+        "weight": 1
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R9",
+        "from_router": "R8",
+        "to_interface": "R8",
+        "to_router": "R9",
+        "weight": 9
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R10",
+        "from_router": "R8",
+        "to_interface": "R8",
+        "to_router": "R10",
+        "weight": 9
+      },
+      {
+        "bidirectional": true,
+        "from_interface": "R11",
+        "from_router": "R9",
+        "to_interface": "R9",
+        "to_router": "R11",
+        "weight": 7
+      }
+    ],
+    "name": "example",
+    "routers": [
+      {
+        "name": "R0"
+      },
+      {
+        "name": "R1"
+      },
+      {
+        "name": "R2"
+      },
+      {
+        "name": "R3"
+      },
+      {
+        "name": "R4"
+      },
+      {
+        "name": "R5"
+      },
+      {
+        "name": "R6"
+      },
+      {
+        "name": "R7"
+      },
+      {
+        "name": "R8"
+      },
+      {
+        "name": "R9"
+      },
+      {
+        "name": "R10"
+      },
+      {
+        "name": "R11"
+      }
+    ]
+  }
+}
