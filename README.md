@@ -34,7 +34,7 @@ GNUv3 licensed code.
 ```
 Topologies may also be created randomly.
 
-## Creating the data plane for an existing topology
+## Create the data plane for an existing topology
 ```
  python3 mpls_kit_gen.py --topology --conf <conf_file.yml> --output_file <dataplane.json>
 ```
@@ -54,7 +54,7 @@ Topologies may also be created randomly.
 python3 mpls_kit_sim.py --topology example/topologies/example.json  --conf example/config.yaml --failure_chunk_file example/failure_chunks/0.yml --result_folder example/results/
 ```
 
-## Creation of configuration and failure chunks
+## Create configuration and failure chunks
 ```
 python3 create_confs.py --topology_path example/topologies/example.json --conf_dir /tmp/results --random_seed 1 --K 2  --threshold 50
 ```
@@ -66,12 +66,27 @@ Generating forwarding tables and running simulations on them for a set of topolo
 
 1.  Create configurations:
 ```
-for TOPO in $(ls <topologies dir>) ;
-    do python3 create_confs.py --topology_path <topologies dir>/$TOPO --conf_dir /tmp/configs --random_seed 1 ;
-done
+for TOPO in $(ls <topologies dir>); do python3 create_confs.py --topology_path <topologies dir>/$TOPO --conf_dir /tmp/configs --random_seed 1 ; done
 ```
 
-2.  Run a specific simulation:
+2.  Run a specific simulation (e.g., with 'Azrena' network):
 ```
-python3 mpls_kit_sim.py --conf /tmp/main_folder/Kdl/conf_1.yml --failure_chunk_file /tmp/configs/Kdl/failure_chunks/0.yml --result_folder /tmp/main_folder/Kdl/results/conf_1/
+python3 mpls_kit_sim.py --conf /tmp/configs/Azrena/conf_1.yml --failure_chunk_file /tmp/configs/Azrena/failure_chunks/0.yml --result_folder /tmp/results/Azrena/results/conf_1/
 ```
+
+3. In the results folder, the file `0.csv` summerizes the simulation results  (0 stands for failure chunk \#0):
+```
+head /tmp/main_folder/Azrena/results/conf_1/0.csv
+484; 484; 0; 484; 2135; 1651
+403; 484; 0; 403; 2135; 1651
+323; 484; 0; 323; 2135; 1651
+365; 484; 0; 365; 2135; 1651
+[...]
+```
+Where the columns stand for, in order:
+  1. Number of successful deliveries.
+  2. Total number of flows.
+  3. Number of forwarding loops.
+  4. Number of connected paths from initial router until a valid destination.
+  5. Total number of routing entries.
+  6. Number of communications among routers.
