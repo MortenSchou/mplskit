@@ -13,7 +13,7 @@ Provides a library with functionalities for handling network topologies and auto
 
 A set of command line utilities for using the library is also provide, keep reading for details.
 
-GNUv3 licensed code.
+GPLv3 licensed code.
 
 # Authors
  - **Juan Vanerio** (juan.vanerio@univie.ac.at ). Faculty of Computer Science, University of Vienna --Vienna, Austria.
