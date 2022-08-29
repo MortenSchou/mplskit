@@ -1,3 +1,9 @@
+<!-- I just looked at the github - seems that the README file is broken little bit
+(see Elaborated example) and there are a few grammar mistakes in the intro.
+For citing purposes, maybe you can add a list of contributors to the
+project as well? -->
+
+
 # MPLS-Kit
 
 MPLS Data Plane Toolkit.
@@ -7,8 +13,15 @@ Provides a library with functionalities for handling network topologies and auto
 
 A set of command line utilities for using the library is also provide, keep reading for details.
 
-
 GNUv3 licensed code.
+
+# Authors
+ - **Juan Vanerio** (juan.vanerio@univie.ac.at ). Faculty of Computer Science, University of Vienna --Vienna, Austria.
+ - **Stefan Schmid**  (schmiste@gmail.com). Faculty of Computer Science, University of Vienna --Vienna, Austria and Internet Network Architectures, Department of Telecommunication Systems, TU Berlin -- Berlin, Germany.
+ - **Morten Konggaard Schou** (mksc@cs.aau.dk).  Dept. of Computer Science,  Aalborg University --Aalborg, Denmark.
+ - **Jiří Srba** (srba@cs.aau.dk).  Dept. of Computer Science,  Aalborg University --Aalborg, Denmark.
+
+# Usage
 
 ## To generate a topology
 ```
@@ -47,13 +60,18 @@ python3 create_confs.py --topology_path example/topologies/example.json --conf_d
 ```
 
 ## Elaborated example
+Generating forwarding tables and running simulations on them for a set of topologies in directory `<topologies_dir>`:
 
-0. Make sure the main folder doesn't exist (e.g.: /tmp/main_folder)
+0. Make sure the configuration destination folder doesn't exist (e.g.: `/tmp/configs`). Both configuration and failure chunks will be stored there.
 
-1. ```
-for TOPO in $(ls <topologies dir>) ; do python3 create_confs.py --topology_path <topologies dir>/$TOPO --conf_dir /tmp/main_folder --random_seed 1 ; done
+1.  Create configurations:
+```
+for TOPO in $(ls <topologies dir>) ;
+    do python3 create_confs.py --topology_path <topologies dir>/$TOPO --conf_dir /tmp/configs --random_seed 1 ;
+done
 ```
 
-2. ```
-python3 mpls_kit_sim.py --conf /tmp/main_folder/Kdl/conf_1.yml --failure_chunk_file /tmp/main_folder/Kdl/failure_chunks/0.yml --result_folder /tmp/main_folder/Kdl/results/conf_1/
+2.  Run a specific simulation:
+```
+python3 mpls_kit_sim.py --conf /tmp/main_folder/Kdl/conf_1.yml --failure_chunk_file /tmp/configs/Kdl/failure_chunks/0.yml --result_folder /tmp/main_folder/Kdl/results/conf_1/
 ```
