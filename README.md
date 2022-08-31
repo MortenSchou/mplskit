@@ -90,3 +90,6 @@ Where the columns stand for, in order:
   4. Number of connected paths from initial router until a valid destination.
   5. Total number of routing entries.
   6. Number of communications among routers.
+
+## Further Examples
+Please take a look at appendix.pdf
